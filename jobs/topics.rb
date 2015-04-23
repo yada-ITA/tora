@@ -4,14 +4,18 @@ require 'open-uri'
 proxy = ENV["PROXY_PATH"]
 proxy_user = ENV["PROXY_ID"]
 proxy_pass = ENV["PROXY_PW"]
-options = { proxy_http_basic_authentication: [proxy, proxy_user, proxy_pass] }
 
+#options = { proxy_http_basic_authentication: [proxy, proxy_user, proxy_pass] }
+
+options = {}
+options[:proxy_http_basic_authentication] = [proxy, proxy_user, proxy_pass]  unless proxy.nil?
 
 # URL
 url = 'http://kilogy-test.herokuapp.com/topics.json'
 
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
-SCHEDULER.every '10s', :first_in => 0 do |job|
+SCHEDULER.every '180s', :first_in => 0 do |job|
+
 
 buffer = open(url,options).read
 json_data =  JSON.parse(buffer)
