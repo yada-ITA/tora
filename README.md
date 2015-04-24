@@ -1,5 +1,6 @@
 Check out http://shopify.github.com/dashing for more information.
---
+
+-----
 
 #tora
 Dashingを利用した、ダッシュボードです。

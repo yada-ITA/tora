@@ -14,7 +14,7 @@ options[:proxy_http_basic_authentication] = [proxy, proxy_user, proxy_pass]  unl
 url = 'http://kilogy-test.herokuapp.com/topics.json'
 
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
-SCHEDULER.every '180s', :first_in => 0 do |job|
+SCHEDULER.every '10m', :first_in => 0 do |job|
 
 
 buffer = open(url,options).read
