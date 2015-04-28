@@ -11,7 +11,7 @@ options = {}
 options[:proxy_http_basic_authentication] = [proxy, proxy_user, proxy_pass]  unless proxy.nil?
 
 # URL
-url = 'http://kilogy-test.herokuapp.com/topics.json'
+url = ENV["TORA_TOPIC_URL"]
 
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
 SCHEDULER.every '180s', :first_in => 0 do |job|
