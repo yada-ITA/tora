@@ -1,11 +1,14 @@
 class Dashing.Perform extends Dashing.Widget
 
   ready: ->
+    alert(@get('ok'))
     @set_quality_graph()
     @set_progress_graph()
     
   
   onData: (data) ->
+    alert('onData')
+    alert(@get('ok'))
     @set_quality_graph()
     @set_progress_graph()
 
