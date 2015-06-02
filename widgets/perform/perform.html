@@ -1,0 +1,23 @@
+<h1 class="title" data-bind="title"></h1>
+
+<div class="box">
+  <div class="graph">
+    <h4>NG/OK数</h4>
+    <div>
+      <span id="perform_ng" data-bind="ng"></span>/
+      <span id="perform_ok" data-bind="ok"></span>
+    </div>
+    <canvas id="perform_cv_quality" height="180" width="180"></canvas>
+  </div>
+  <div class="graph">
+    <h4>実績/予定数</h4>
+    <div>
+    <span id="perform_progress" data-bind="progress"></span>%
+      (
+        <span id="perform_complete" data-bind="complete"></span>/
+        <span id="perform_yotei" data-bind="yotei"></span>
+      )
+    </div>
+    <canvas id="perform_cv_progress" height="180" width="180"></canvas>
+  </div>
+</div>
