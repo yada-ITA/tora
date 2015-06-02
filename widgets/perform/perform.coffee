@@ -23,7 +23,7 @@ class Dashing.Perform extends Dashing.Widget
             color: '#333333'
         }
     ]
-    ctx_progress = $(@node).find('#conchk_cv_progress')[0].getContext('2d')
+    ctx_progress = $(@node).find('#perform_cv_progress')[0].getContext('2d')
     new Chart(ctx_progress).Doughnut(progress)
 
   set_quality_graph: ->
@@ -39,5 +39,5 @@ class Dashing.Perform extends Dashing.Widget
             color: "#ffb6b9"
         }
     ]
-    ctx_quality = $(@node).find('#conchk_cv_quality')[0].getContext('2d')
+    ctx_quality = $(@node).find('#perform_cv_quality')[0].getContext('2d')
     new Chart(ctx_quality).Doughnut(quality)
