@@ -22,8 +22,8 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   json_data =  JSON.parse(buffer)
 
   sleep(1)
-#  dat = json_data[1]
-  dat = [100,30,150,130]
+  dat = json_data[1]
+
   progress_calc = (dat[2].to_f/dat[3] * 100).round
  
   puts "******json_data************#########################***************************"
