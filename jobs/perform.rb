@@ -22,6 +22,11 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
 
   dat = json_data[1]
   progress_calc = (dat[2].to_f/dat[3] * 100).round
+puts "**********************#########################***************************"
+  puts json_data
+  puts dat
+  puts progress_calc
+puts "**********************#########################***************************"
 
   send_event('conchk', { ok: dat[0], ng: dat[1], 
                          complete: dat[2], yotei: dat[3],
