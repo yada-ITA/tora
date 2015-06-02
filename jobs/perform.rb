@@ -18,10 +18,8 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   url = base_url + ym
 
   buffer = open(url,options).read
-  sleep(5)
   json_data =  JSON.parse(buffer)
 
-  sleep(1)
   dat = json_data[1]
 
   progress_calc = (dat[2].to_f/dat[3] * 100).round
