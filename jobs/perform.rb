@@ -27,6 +27,6 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
 
   send_event('perform', { ok: dat[0], ng: dat[1], 
                          complete: dat[2], yotei: dat[3],
-                          progress: progress_calc, zan: dat[3] })
+                          progress: progress_calc, zan:dat[2] + dat[3] })
 
 end
