@@ -11,15 +11,15 @@ class Dashing.Perform extends Dashing.Widget
 
 
   set_progress_graph: ->
-    yotei = @get('complete');
-    zan = @get('zan')
+    complete = @get('complete');
+    yotei = @get('yotei')
     progress = [
         {
-            value: yotei,
+            value: complete,
             color:'#cc33cc'
         },
         {
-            value: zan,
+            value: yotei,
             color: '#333333'
         }
     ]
