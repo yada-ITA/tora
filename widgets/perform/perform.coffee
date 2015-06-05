@@ -12,7 +12,7 @@ class Dashing.Perform extends Dashing.Widget
 
   set_progress_graph: ->
     yotei = @get('complete');
-    zan = yotei- @get('progress')
+    zan = @get('zan')
     progress = [
         {
             value: yotei,
