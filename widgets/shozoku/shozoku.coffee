@@ -41,7 +41,7 @@ class Dashing.Shozoku extends Dashing.Widget
   set_complete_graph: ->
     header = @get('header')
     complete = @get('complete')
-    wait = @get('wait')
+    waiting = @get('waiting')
     complete_wait  = {
         labels : header,
         datasets : [
@@ -53,7 +53,7 @@ class Dashing.Shozoku extends Dashing.Widget
           {
           fillColor : "#333333",
           strokeColor : "#eeeeee",
-          data : wait
+          data : waiting
           }
         ]
       }
