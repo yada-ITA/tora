@@ -1,5 +1,39 @@
-$background-color:  #3366ff;
+$background-color:  #5588cc;
+$tableborder-color: #eeeeee;
+$tableheader-color: #dddd55;
+$tableheader-bgcolor: #3366aa;
+
 
 .widget-topics {
   background-color: $background-color;
+  
+    table.borderd{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-top: 1px solid $tableborder-color;
+    border-left: 1px solid $tableborder-color;
+
+    th{
+      width:25%;
+      padding:4px;
+      text-align: left;
+      vertical-align: top;
+      color: $tableheader-color;
+      background-color: $tableheader-bgcolor;
+      border-left: 1px solid $tableborder-color;
+      border-top: 1px solid $tableborder-color;
+      border-right: 1px solid $tableborder-color;
+      border-bottom: 4px double $tableborder-color;
+    }
+
+    td{
+      width:75%;
+      text-align: left;
+      padding:4px;
+      background-color: $tableheader-bgcolor - #111111;
+      border: 1px solid $tableborder-color;
+    }
+
+  }
 }

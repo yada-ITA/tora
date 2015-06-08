@@ -1,5 +1,21 @@
-$background-color:  #dd54aa;
+$background-color:  #aa5477;
 
 .widget-shozoku {
   background-color: $background-color;
+    .box {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .box:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .graph{
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
